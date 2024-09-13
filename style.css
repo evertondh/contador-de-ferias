@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+/* Video background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background iframe {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Prevent interaction with the video */
+}
+
+/* Contador */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 1.5rem;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    margin-bottom: 5px;
+}
+
+.time {
+    font-size: 4rem;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    padding: 0 10px;
+}
+
+.separator {
+    font-size: 4rem;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+    padding: 0 10px;
+}
+
+@media (max-width: 600px) {
+    .label {
+        font-size: 1rem;
+    }
+
+    .time {
+        font-size: 2rem;
+    }
+
+    .separator {
+        font-size: 2rem;
+    }
+}
+
+#unmute-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #00ff00;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#unmute-button:hover {
+    background-color: #00cc00;
+}
+
+/* Regras de estilo anteriores */
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.controls button {
+    padding: 10px 20px;
+    background-color: #00ff00;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #00cc00;
+}
+
+/* Estilo para o indicador de volume */
+.volume-indicator {
+    position: fixed;
+    /* Fixa na tela */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Centraliza o elemento */
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid #000;
+    display: none;
+    /* Inicialmente escondido */
+    z-index: 1000;
+    /* Garantir que fique sobre outros elementos */
+    font-size: 18px;
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    display: none;
+    /* Inicialmente escondido */
+}
+
+.cookie-banner button {
+    background-color: #00ff00;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.news-container {
+    width: 300px; /* Ajuste conforme necessário */
+    height: 150px; /* Ajuste conforme necessário */
+    overflow: hidden;
+    position: fixed;
+    top: 10%; /* Ajuste conforme necessário */
+    left: 10%; /* Ajuste conforme necessário */
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Para garantir que fique sobre outros elementos */
+}
+.news-box {
+    position: absolute;
+    width: 100%;
+    animation: scroll 10s linear infinite;
+}
+.news-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+@keyframes scroll {
+    0% { top: 100%; }
+    100% { top: -100%; }
+}
+
+#floating-iframe {
+    position: fixed;
+    top: 10%; /* Distância do topo */
+    left: 10%; /* Distância da esquerda */
+    width: 375px;
+    height: 667px;
+    border: 2px solid #000;
+    z-index: 1000;
+}

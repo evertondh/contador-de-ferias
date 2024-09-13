@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="video-background">
+        <div id="youtube-player"></div>
+    </div>
+
+    <!-- <iframe id="floating-iframe" src="https://g1.globo.com/pe/pernambuco/"></iframe> -->
+
+    <div class="container">
+        <div class="clock">
+            <div class="time-container">
+                <div class="label">Dias</div>
+                <div id="days" class="time">00</div>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-container">
+                <div class="label">Horas</div>
+                <div id="hours" class="time">00</div>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-container">
+                <div class="label">Minutos</div>
+                <div id="minutes" class="time">00</div>
+            </div>
+            <div class="separator">:</div>
+            <div class="time-container">
+                <div class="label">Segundos</div>
+                <div id="seconds" class="time">00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controles de volume -->
+    <div class="controls">
+        <button id="fullscreen-button">Tela Cheia</button>
+        <button id="mute-button">Unmute</button>
+        <button id="volume-down">Volume -</button>
+        <button id="volume-up">Volume +</button>
+
+    </div>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Este site usa cookies para melhorar a experiência do usuário. Ao continuar navegando, você concorda com o uso
+            de cookies.</p>
+        <button id="accept-cookies">Aceitar</button>
+    </div>
+    
+    <!-- Exibição da porcentagem de volume -->
+    <div id="volume-indicator" class="volume-indicator">Volume: 100%</div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
