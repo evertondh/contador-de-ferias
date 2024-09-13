@@ -28,7 +28,7 @@ setInterval(countdown, 1000);
 
 // Função para inicializar o player do YouTube
 function onYouTubeIframeAPIReady() {
-  const videoID = 'YDTgn0kKQQU';
+  const videoID = 'fn2v5Wa2lpQ';
   const player = new YT.Player('youtube-player', {
       height: '100%',
       width: '100%',
